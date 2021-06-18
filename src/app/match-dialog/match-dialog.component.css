@@ -1,0 +1,138 @@
+a.button5{
+    display:inline-block;
+    padding:0.46em 1.6em;
+    border:0.1em solid #000000;
+    margin:0 0.2em 0.2em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#000000;
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+    background-color:#e03333;
+    text-align: center;
+    transition: all 0.15s
+}
+a.button5:hover{
+    text-shadow: 0 0 2em rgb(0, 0, 0);
+    color:#ffffff;
+    border-color:#ffffff;
+    }
+@media all and (max-width:30em){
+         a.button5{
+        display:block;
+        margin:0.4em auto;
+    }
+}
+
+.u-section-1 .u-sheet-1 {
+    min-height: 500px;
+  }
+  
+  .u-section-1 .u-group-1 {
+    width: 380px;
+    min-height: 266px;
+    height: auto;
+    margin: 60px auto;
+  }
+  
+  .u-section-1 .u-container-layout-1 {
+    padding: 20px 30px 30px;
+  }
+  
+  .u-section-1 .u-text-1 {
+    margin: 0 auto;
+  }
+  
+  .u-section-1 .u-btn-1 {
+    border-style: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+    background-image: none;
+    margin: 23px auto 0;
+  }
+  
+  .u-section-1 .u-btn-2 {
+    border-style: none;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    background-image: none;
+    margin: 25px auto 0;
+    padding: 10px 14px;
+  }
+  
+  @media (max-width: 1199px) {
+    .u-section-1 .u-group-1 {
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .u-section-1 .u-container-layout-1 {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    .u-section-1 .u-group-1 {
+      width: 340px;
+    }
+  }
+  .u-btn {
+    /*display: inline-block;*/
+    display: table;
+    /*TODO maye need another solution for negative marin*/
+    cursor: pointer;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+    border: 0 none transparent;
+    outline-width: 0;
+    background-color: transparent;
+    margin: 0;
+    -webkit-text-decoration-skip: objects;
+    font-style: initial;
+    white-space: nowrap;
+    -webkit-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    vertical-align: middle;
+    text-align: center;
+    padding: 10px 30px;
+    border-radius: 0;
+    align-self: flex-start;
+  }
+
+  
+  .center-btn{
+    
+        text-align: center;   
+        width: 300px;  
+        height: 200px;  
+        padding-top: 100px;  
+        }  
+
+  .my-snackbar{
+    background: #2196F3;
+    color: #ffffff;
+  }
+  .my-snackbar-not-ok{
+    background: #f31919;
+    color: #000000;
+  }
+
+    
+  
+  

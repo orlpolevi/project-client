@@ -1,0 +1,17 @@
+.table-mine {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  
+  th {
+    text-align: left;
+  }
+
+  p {
+    font-family: Lato;
+  }
+  
+  .selectedRow {
+    background-color: skyblue;
+  }

@@ -1,0 +1,27 @@
+<div style="text-align: center;">
+<h1 mat-dialog-title style="text-align: center;">Changing {{data.name}}'s courses</h1>
+<!-- <h2 mat-dialog-title style="text-align: center;">User id: {{data.user_id}}</h2> -->
+<!-- <div *ngFor="let i of data.courses"><p>{{i}}</p> </div> -->
+
+
+<!--<app-course-table></app-course-table> -->
+<div>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <td class="title-column">Id</td>
+            <td class="title-column">Course</td>
+
+        </tr>
+    </thead>
+    <tr *ngFor="let u of allRows" [class.selectedRow]="rowIsSelected(u.id)" (click)="onRowClick(u.id)" style="cursor: pointer;">
+        <td class="row-left title">{{u.id}}</td>
+        <td class="row-mid title">{{u.course}}</td>
+        <td *ngIf="u.admin==false" class="row-right"></td>
+    </tr>
+   </table>
+</div>
+<div style="align-self: auto; align-items:center" > 
+   <button (click)="onLogClick()">Change courses</button>
+</div>
+</div>

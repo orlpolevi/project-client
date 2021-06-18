@@ -1,0 +1,90 @@
+
+
+
+                                                                         <!-- Navbar -->
+
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3">Tutoring Managment System</a>
+            <!-- Sidebar Toggle-->
+
+            <div class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0"> <button mat-stroked-button color="warn"  (click)="return_to_dash()">Back to Dashboard</button></div>
+
+        </nav>
+
+
+        <div id="layoutSidenav">
+                <main>
+                <div id="layoutSidenav_content">
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Admin's Dashboard</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">Match student and tutor</li>
+                        </ol>
+                        <div class="row">
+         
+
+                        </div>
+                        <div>
+                        <mat-form-field class="example-form-field">
+                          <mat-label>Enter student id</mat-label>
+                          <input matInput type="text" [(ngModel)]="query_value">
+                          <button  *ngIf="query_value" matSuffix mat-icon-button aria-label="Clear" (click)="query_value=''">
+                            <mat-icon>close</mat-icon>
+                          </button>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field appearance="fill">
+                          <mat-label>Courses</mat-label>
+                          <mat-select [(value)]="selected_course">
+                            <mat-option></mat-option>
+                            <mat-option  [value]="option.course" *ngFor="let option of course_list" [id]="option.id">
+                              {{option.course}}
+                            </mat-option>
+                          </mat-select>
+                        </mat-form-field> 
+                        <br>
+                        <button mat-stroked-button (click)= "pass_name_and_course_to_server($event)">Match Student</button>   
+
+                      </div>
+                      
+
+
+                        <div> <h3 style="text-underline-offset:initial">Results:</h3>
+
+                            <table class="table table-striped table-dark">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">No.</th>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">First Name</th>
+                                    <th scope="col">Day Congruency</th>
+                                    <th scope="col">Match?</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr *ngFor="let t of matched_tutors; let i = index;">
+                                    <th scope="row">{{i+1}}</th>
+                                    <td>{{t[0]}}</td>
+                                    <td>{{t[1]}}</td>
+                                    <td>{{t[2]}}</td>
+                                    <td><a (click)="openDialog_match_tutor_to_student(t)" class="button5">Match</a></td>
+
+                                  </tr>
+                                </tbody>
+                              </table>
+                              
+                        </div>
+                    </div>
+                </div> 
+                </main>
+            
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+  

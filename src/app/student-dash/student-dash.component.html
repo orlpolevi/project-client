@@ -1,0 +1,155 @@
+
+ 
+
+     
+
+                                                                         
+     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <div > 
+        <a class="navbar-brand ps-3">Tutoring Managment System</a>
+       
+        
+        <button mat-stroked-button color="warn" (click)="logout()">Logout</button>
+        </div>
+    </nav> 
+   <div id="layoutSidenav_content">
+        <div class="container-fluid px-4">
+            <h1 class="mt-4">Student Dashboard</h1>
+
+        </div>
+    </div> 
+    <div class="col-xl-12 col-md-6" >
+        <div class="card bg-primary text-white mb-4">
+        
+            <div class="card-body" style="text-align: center;">
+                <p>Hello {{this.name_to_dialog}}! </p>  
+                <p>Department: {{user_department}}</p>
+               
+                <p><a style="height: 36px;width: 130px;" mat-raised-button (click)="openDialog_change_courses()">Change courses</a></p>
+                <p><a style="height: 36px;width: 130px;" mat-raised-button (click)="openDialog_change_days()">Change days</a></p>
+            </div>
+        </div>
+        <!--table with info about the user-->
+        <div>
+            <table class="table table-striped table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">Courses i want help with</th>
+                    <th scope="col"></th>
+                    <th></th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let t of user_current_courses; let i = index;">
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{t}}</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  
+                </tbody>
+                <thead>
+                  <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">Days i want to learn in</th>
+                    <th scope="col">Hours</th>
+                    <th></th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let x of user_current_days; let j = index;">
+                    <th scope="row">{{j+1}}</th>
+                    <td>{{x["day"]}}</td>
+                    <td>{{x["hours"]}}</td>
+                    <td> </td>
+                  </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                      <th scope="col">No.</th>
+                      <th scope="col">My assigned tutors</th>
+                      <th scope="col">Course assigned to</th>
+                      <th scope="col">Date of match</th>
+  
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let z of user_current_tutors; let r = index;">
+                      <th scope="row">{{r+1}}</th>
+                      <td>{{z.match.tutor_name}}</td>
+                      <td>{{z.match.course}}</td>
+                      <td>{{z.match.date_of_match}}</td>
+                    </tr>
+                  </tbody>
+              </table>
+
+        </div>
+    </div>
+
+          
+            <!-- mine -->
+<!-- 
+
+            <div id="layoutSidenav_content">
+                <div class="container-fluid px-4">
+                    <h1 class="mt-4">Admin's Dashboard</h1>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item active">System functionality:</li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-xl-3 col-md-6"> 
+                            <div class="card bg-primary text-white mb-4">
+                                <div class="card-body"> Tutors info 
+                                    <a class="text-white stretched-link text-muted" (click)="go_to_tutors_list()" style="cursor: pointer;"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card bg-primary text-white mb-4">
+                                <div class="card-body">Students info
+                                    <a class="small text-white stretched-link" (click)="go_to_students_list()" style="cursor: pointer;"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card bg-primary text-white mb-4">
+                                <div class="card-body">Change Tutors constraints
+                                    <a class="small text-white stretched-link" (click)="go_to_user_constraints()" style="cursor: pointer;"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card bg-success text-white mb-4">
+                                <div class="card-body">Match tutor with a student
+                                    <a class="text-white stretched-link text-muted" (click)="go_to_match_students()" style="cursor: pointer;"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card bg-success text-white mb-4">
+                                <div class="card-body">Matched tutors and students list
+                                    <a class="text-white stretched-link text-muted" (click)="go_to_matched_list()" style="cursor: pointer;"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+
+                </div>
+            </div> 
+
+-->
+            
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="assets/demo/chart-area-demo.js"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="js/datatables-simple-demo.js"></script>
+

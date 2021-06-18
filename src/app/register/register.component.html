@@ -1,0 +1,253 @@
+
+<!-- mine-->
+
+
+<body class="bg-primary">
+        
+    <div id="layoutAuthentication" >
+        <div id="layoutAuthentication_content">
+            <main>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-5">
+                            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                <div class="card-header"><h3 class="text-center font-weight-light my-4">Register </h3> </div>
+                                <div class="card-body">
+
+
+                              
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form-row">
+            <div class="form-group col">
+                <label>Department</label>
+                <select formControlName="department" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.department.errors }">
+                    <option value=""></option>
+                    <option value="Software">Software</option>
+                    <option value="Electricity and electronics">Electricity and electronics</option>
+                    <option value="Mechanics">Mechanics</option>
+                    <option value="Bio-technology">Bio-technology</option>
+                    <option value="Information Systems">Information Systems</option>
+                    <option value="Optics">Optics</option>
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="Industry and management">Industry and management</option>
+                </select>
+                <div *ngIf="submitted && f.department.errors" class="invalid-feedback">
+                    <div *ngIf="f.department.errors.required">Department is required</div>
+                </div>
+            </div>
+            <div class="form-group ">
+                <label>Student\Tutor</label>
+                <select formControlName="userType" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.userType.errors }">
+                    <option value=""></option>
+                    <option value="student">Student</option>
+                    <option value="tutor">Tutor</option>
+
+                </select>
+                <div *ngIf="submitted && f.userType.errors" class="invalid-feedback">
+                    <div *ngIf="f.userType.errors.required">User type is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>ID</label>
+                <input type="text" formControlName="id" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.id.errors }" />
+                <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
+                    <div *ngIf="f.id.errors.required">ID Name is required</div>
+                    <div *ngIf="f.id.errors.pattern">ID must be in this format(Example): '305284479'</div>
+                </div>
+            </div>
+            <div class="form-group ">
+                <label>First Name</label>
+                <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                    <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                </div>
+            </div>
+            <div class="form-group ">
+                <label>Last Name</label>
+                <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                    <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group ">
+            <label>Phone</label>
+            <input type="text" formControlName="phone" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.phone.errors }" />
+            <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+                <div *ngIf="f.phone.errors.required">Phone Name is required</div>
+                <div *ngIf="f.phone.errors.pattern">Phone must be in this format(Example): '050-1234567'</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">Email is required</div>
+                <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group ">
+                <label>Password</label>
+                <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">Password is required</div>
+                    <div *ngIf="f.password.errors.minlength">Password must be at least 5 characters</div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" formControlName="acceptTerms" id="acceptTerms" class="form-check-input" [ngClass]="{ 'is-invalid': submitted && f.acceptTerms.errors }" />
+            <label for="acceptTerms" class="form-check-label">Accept Terms & Conditions</label>
+            <div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">Accept Ts & Cs is required</div>
+        </div>
+        <div class="form-group">
+            <button [disabled]="loading" class="btn btn-primary">
+                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                Register
+            </button>
+            <a routerLink="../" href="" class="btn btn-link">Cancel</a>
+        </div>
+    </form>
+
+
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+
+
+
+<!-- old ragister
+                                    <form novalidate #a="ngForm" (ngSubmit) = "StudentRegistration($event)" > 
+       
+                                        <div class="row register-form ">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                  
+                                                        <input  type="text" class="form-control" placeholder="First Name *" value="" id="firstName" 
+                                                            [(ngModel)]="local_first_name"
+                                                            name="firstName"
+                                                            #firstName="ngModel"
+                                                            required> 
+                                                         <div *ngIf="firstName.errors?.required && firstName.touched" 
+                                                            class="alert alert-danger">
+                                                            Please enter your  first name
+                                                        </div>
+                                                       
+                                                </div>
+                                                <div class="form-group">
+                                                   
+                                                    <input type="text" class="form-control" placeholder="Last Name *" value="" id="lastName" 
+                                                            [(ngModel)]="local_last_name"
+                                                            name="lastName"
+                                                            #lastName='ngModel'
+                                                            required> 
+                                                            <div *ngIf="lastName.errors?.required && lastName.touched" 
+                                                                  class="alert alert-danger">
+                                                                          Please enter your last name
+                                                           </div>
+                                                </div>
+                                    
+                                                <div class="form-group">
+                                                   
+                                                     <input type="password" class="form-control" placeholder="Password *" value="" id="password" 
+                                                    [(ngModel)]="local_password"
+                                                    name="password"
+                                                    #password='ngModel'
+                                                    required> 
+                                                    <div *ngIf="password.errors?.required && password.touched" 
+                                                          class="alert alert-danger">
+                                                                 Please enter your password
+                                                    </div>
+                                                </div>
+                                    
+                                                
+                                                <mat-form-field appearance="fill">
+                                                    <mat-label>Department</mat-label>
+                                                    <mat-select [(value)]="selected_department">
+                                                      <mat-option></mat-option>
+                                                      <mat-option  [value]="option.dep" *ngFor="let option of department_list" [id]="option.id">
+                                                        {{option.dep}}
+                                                      </mat-option>
+                                                    </mat-select>
+                                                  </mat-form-field> 
+                                    
+                                        
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                        <input type="email" class="form-control" placeholder="Your Email *" value="" id="email"
+                                                        [(ngModel)]="local_email"
+                                                        name="email"
+                                                        #email='ngModel'
+                                                        required> 
+                                                        <div *ngIf="email.errors?.required && email.touched" 
+                                                            class="alert alert-danger">
+                                                                Please enter your Email
+                                                       </div>
+                                                
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="number" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" 
+                                                            id="phone"
+                                                            [(ngModel)]="local_phone"
+                                                            name="phone"
+                                                            #phone='ngModel'
+                                                            required> 
+                                                    <div *ngIf="phone.errors?.required && phone.touched" 
+                                                            class="alert alert-danger">
+                                                            Please enter your phone
+                                                    </div>
+                                    
+                                                     <div *ngIf="phone.errors?.minlength && phone.touched" 
+                                                        class="alert alert-danger">
+                                                        Please enter valid(10 numbers) phone number
+                                                    </div> 
+                                                
+                                    
+                                                    <div *ngIf="phone.errors?.maxlength && phone.touched" 
+                                                        class="alert alert-danger">
+                                                        Please enter valid phone number
+                                                    </div>
+                                               
+                                                </div>
+                                    
+                                                <div class="form-group">
+                                                    <input type= "number" class="form-control" placeholder="ID *" value=""  id="ID" />
+                                                </div> 
+                                    
+
+                                                <mat-form-field appearance="fill">
+                                                    <mat-label>User type</mat-label>
+                                                    <mat-select [(value)]="selected_type">
+                                                      <mat-option></mat-option>
+                                                      <mat-option  [value]="option.type" *ngFor="let option of user_list" [id]="option.id">
+                                                        {{option.type}}
+                                                      </mat-option>
+                                                    </mat-select>
+                                                  </mat-form-field> 
+
+                                             
+                                                <input type="submit" class="btnRegister"  value="Submit"/>
+                                                
+                                    
+                                            </div>
+                                        </div>
+                                    </form>
+
+
+-->

@@ -1,0 +1,16 @@
+<table class="table table-bordered table-striped" style="border: none;">
+    <thead>
+        <tr>
+            <td class="title-column">Id</td>
+            <td class="title-column">Course</td>
+
+        </tr>
+    </thead>
+    <tr *ngFor="let u of allRows" [class.selectedRow]="rowIsSelected(u.id)" (click)="onRowClick(u.id)" style="cursor: pointer;">
+        <td class="row-left title">{{u.id}}</td>
+        <td class="row-mid title">{{u.course}}</td>
+        <td *ngIf="u.admin==false" class="row-right"></td>
+    </tr>
+   </table>
+  
+   <button (click)="onLogClick()">Log selected rows</button>

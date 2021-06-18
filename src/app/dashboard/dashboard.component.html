@@ -1,0 +1,109 @@
+
+ 
+
+     
+
+                                                                         
+     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+          
+            <a class="navbar-brand ps-3">Tutoring Managment System</a>
+           
+            
+            <div class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0"> <button mat-stroked-button color="warn" (click)="logout()">Logout</button>
+            </div>
+        </nav> 
+       <div id="layoutSidenav_content">
+            <div class="container-fluid px-4">
+                <h1 class="mt-4">Admin's Dashboard</h1>
+                <ol class="breadcrumb mb-4">
+                    <li class="breadcrumb-item active">System functionality:</li>
+                </ol>
+            </div>
+        </div> 
+
+        <div class="container">
+            <div class="control-1">    
+                <a class="button5" (click)="go_to_tutors_list()" style="cursor: pointer;">Tutors info </a>
+            </div>
+
+            <div class="control-2">
+                <a class="button5" (click)="go_to_students_list()" style="cursor: pointer;">Students info </a>
+            </div>
+    <!--         <div class="control-3"> 
+                <a class="button5" (click)="go_to_user_constraints()" style="cursor: pointer;"> Change student/tutor constraints</a>
+            </div>  removed due to request from deanship-->
+            <div class="control-3">
+                <a class="button5" (click)="go_to_match_students()" style="cursor: pointer;">Match a student</a>
+            </div>
+            <div class="control-4">
+                <a class="button5" (click)="go_to_matched_list()" style="cursor: pointer;">Matched tutors and students list</a>
+            </div>
+            <div class="control-5">
+                <a class="button5" (click)="go_to_manual_match()" style="cursor: pointer;">Manual match</a>
+            </div>
+          </div>
+              
+
+                <!-- mine -->
+ <!-- 
+
+                <div id="layoutSidenav_content">
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Admin's Dashboard</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">System functionality:</li>
+                        </ol>
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6"> 
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body"> Tutors info 
+                                        <a class="text-white stretched-link text-muted" (click)="go_to_tutors_list()" style="cursor: pointer;"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">Students info
+                                        <a class="small text-white stretched-link" (click)="go_to_students_list()" style="cursor: pointer;"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">Change Tutors constraints
+                                        <a class="small text-white stretched-link" (click)="go_to_user_constraints()" style="cursor: pointer;"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-success text-white mb-4">
+                                    <div class="card-body">Match tutor with a student
+                                        <a class="text-white stretched-link text-muted" (click)="go_to_match_students()" style="cursor: pointer;"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-success text-white mb-4">
+                                    <div class="card-body">Matched tutors and students list
+                                        <a class="text-white stretched-link text-muted" (click)="go_to_matched_list()" style="cursor: pointer;"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+
+                    </div>
+                </div> 
+
+-->
+                
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+

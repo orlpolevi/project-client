@@ -1,0 +1,15 @@
+table {
+    width: 100%;
+  }
+  
+  th {
+    text-align: left;
+  }
+
+  p {
+    font-family: Lato;
+  }
+  
+  .selectedRow {
+    background-color: skyblue;
+  }
