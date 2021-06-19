@@ -81,4 +81,7 @@ export class ConstDialogComponent implements OnInit {
       //verticalPosition: 'top',
     });
   }
+  close_dialog(){
+    this.dialogRef.close();
+  }
 }
