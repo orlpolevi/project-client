@@ -74,7 +74,9 @@ get_msg(data:any){
   alert("login successful redirecting to dashboard")
   setTimeout(()=>{this.route_to_user_dash()},1000)
   }
+  else if (this.msg.status == "email is not valid"){this.loading = false;alert("email is invalid!") }
   else {alert("Something wrong happend! cannot login!")}
+  this.loading = false;
   
   
 }
